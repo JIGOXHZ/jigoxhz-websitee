@@ -11,6 +11,12 @@
             margin-top: 90px; /* Ganti dengan nilai yang diinginkan */
         }
     </style>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("pJ4oMWxUrm2ckwd7_"); // Ganti dengan User ID Anda
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -54,7 +60,7 @@
         <div class="circle-text-container">
             <div class="circle"></div>
             <span class="dot">●</span> 
-            <span class="request-text bold">Request in development stage coming soon</span>
+            <span class="request-text bold">Request</span>
         </div>
         <!-- Menambahkan gambar di bawah teks berjalan -->
         <div style="text-align: center; margin-top: 20px;">
@@ -97,9 +103,18 @@
                 return;
             }
 
-            // Anda dapat menambahkan kode untuk mengirim email menggunakan EmailJS atau metode lain di sini
-            console.log('Email:', email);
-            console.log('Message:', message);
+            // Mengirim email menggunakan EmailJS
+            emailjs.send("service_sxkq6ht", "template_qy7mjwg", {
+                from_email: email,
+                message: message
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Pesan Anda telah dikirim!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Pengiriman pesan gagal. Silakan coba lagi.');
+            });
 
             // Reset input setelah mengirim
             document.querySelector('.input-box').value = '';
