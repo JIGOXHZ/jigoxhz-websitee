@@ -5,23 +5,26 @@ body {
     background-color: #808080;
     color: white;
 }
+
 header {
     background-color: #ffa500;
     color: white;
     padding: 0px;
     display: flex;
     align-items: center;
-    position: fixed; /* Membuat header tetap di atas */
-    width: 100%; /* Memastikan header mengambil lebar penuh */
-    top: 0; /* Menempatkan header di atas */
-    z-index: 1000; /* Memastikan header berada di atas konten lain */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+
 .logo {
     width: 50px;
     height: auto;
     margin-right: 10px;
     margin-left: 10px;
 }
+
 .hamburger {
     background-color: #ff8c00;
     border: none;
@@ -31,43 +34,70 @@ header {
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
-    margin-left: auto; /* Mengisi ruang kosong di kiri, mendorong tombol ke kanan */
-    margin-right: 20px; /* Menambahkan jarak dari sisi kanan */
+    margin-left: auto;
+    margin-right: 20px;
 }
+
 .hamburger:hover {
     background-color: #ffa500;
     transform: scale(1.1);
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: none;
-    position: absolute;
-    right: 50px;
-    background-color: #ffa500;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 2px solid #808080;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    pointer-events: none;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
 }
+
 nav ul.show {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
+    transform: translateX(0);
 }
+
+nav ul li {
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    padding: 0px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
     transition: background-color 0.3s;
 }
+
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.social-logo, .youtube-logo {
+    width: 17px;
+    height: auto;
+    margin-right: 5px;
+    transition: transform 0.3s;
+    vertical-align: middle;
+}
+
+.social-logo:hover, .youtube-logo:hover {
+    transform: scale(1.1);
+}
+
 .custom-button {
     background-color: #808080;
     border: 2px solid #ffa500;
@@ -86,14 +116,17 @@ nav ul li a:hover {
     justify-content: center;
     text-decoration: none;
 }
+
 .custom-button:hover {
     background-color: rgba(255, 165, 0, 0.8);
     transform: scale(1.05);
 }
+
 .button-container {
     display: flex;
     align-items: center;
 }
+
 .rounded-box {
     border-radius: 15px;
     background-color: #ffa500;
@@ -102,51 +135,183 @@ nav ul li a:hover {
     width: 92%;
     margin: 1px auto;
     text-align: center;
-    height: 0px;
     display: flex;
     align-items: center;
 }
+
 .marquee {
     white-space: nowrap;
     animation: marquee 10s linear infinite;
     font-size: 15px;
     text-align: center;
 }
+
 @keyframes marquee {
     from {
         transform: translateX(50%);
     }
     to {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
     }
 }
+
 .long-button {
-    background-color: #ffa500; /* Warna latar belakang */
-    color: white; /* Warna teks */
-    border: none; /* Menghilangkan border */
-    padding: 10px; /* Padding tombol */
-    font-size: 18px; /* Ukuran font */
-    cursor: pointer; /* Pointer saat hover */
-    text-align: center; /* Teks di tengah */
-    width: 94%; /* Mengatur lebar tombol menjadi 100% */
-    border-radius: 5px; /* Sudut membulat */
-    margin: 20px auto; /* Jarak atas dan bawah, serta margin kiri dan kanan otomatis untuk memusatkan */
-    text-decoration: none; /* Menghilangkan garis bawah */
-    display: block; /* Memastikan tombol berada dalam baris baru */
-    transition: background-color 0.3s, transform 0.3s; /* Efek transisi */
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    width: 94%;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+.footer-home, .footer-page2 {
+    background-color: #808080;
+    text-align: center;
+    padding: 10px;
+}
+
 .footer-home {
-    background-color: #808080; /* Warna latar belakang footer */
-    text-align: center; /* Teks di tengah */
-    padding: 10px; /* Padding pada footer */
-    margin-top: 320px; /* Menempatkan footer di bagian bawah */
+    margin-top: 320px;
 }
+
 .footer-page2 {
-    background-color: #808080; /* Warna latar belakang footer */
-    text-align: center; /* Teks di tengah */
-    padding: 10px; /* Padding pada footer */
-    margin-top: 425px; /* Menempatkan footer di bagian bawah */
+    margin-top: 424px;
 }
+
 main {
-    padding-top: 80px; /* Memberikan padding lebih besar untuk menghindari konten tertutup oleh header */
+    padding-top: 80px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-box {
+    background-color: #ffa500;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.slide-item {
+    opacity: 0;
+    transform: translateX(70px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+nav ul.show .slide-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav ul.show .slide-item:nth-child(3) { transition-delay: 0.1s; }
+nav ul.show .slide-item:nth-child(4) { transition-delay: 0.2s; }
+nav ul.show .slide-item:nth-child(5) { transition-delay: 0.3s; }
+nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
+
+.menu-text {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+.circle-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.dot {
+    color: #ffa500;
+    font-size: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.request-text {
+    color: white;
+    font-weight: bold;
+}
+
+.request-image {
+    position: relative;
+    z-index: 1;
+    margin-top: -25px;
+}
+
+.circular-box {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: var(--box-size, 350px);
+    height: var(--box-size, 320px);
+    background-color: #ffa500;
+    border-radius: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.text-box {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-box, .message-box {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #696969;
+}
+
+.input-box {
+    height: 20px;
+}
+
+.message-box {
+    height: 80px;
+    resize: vertical;
+}
+
+.send-button {
+    width: 90%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #ffa500;
 }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jigoxhzz Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link ke style.css -->
+    <style>
+        /* Tambahan CSS untuk margin top menu Telegram */
+        nav ul li.menu-telegram {
+            margin-top: 90px; /* Ganti dengan nilai yang diinginkan */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="Logo" class="logo">
+        <h1>Jigoxhzz</h1>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul id="menu">
+                <img src="silang.png" alt="Close" class="close-button" onclick="toggleMenu()"> <!-- Tombol X dengan gambar -->
+                <li>
+                    <div class="menu-box">HELP MENU</div> <!-- Kotak baru -->
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://t.me/JigoxhZzz" target="_blank" class="menu-text">
+                        <img src="telegram.png" alt="Telegram" class="social-logo"> Telegram
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank" class="menu-text">
+                        <img src="youtube.png" alt="YouTube" class="youtube-logo"> YouTube
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://saweria.co/Jigoxhz" target="_blank" class="menu-text">
+                        <img src="saweria.png" alt="Saweria" class="social-logo"> Donate/Support
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="page3.html" class="menu-text">
+                        <img src="request.png" alt="Request" class="social-logo"> Request
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 style="text-align: center; color: #ffa500; margin: 7px 0; font-size: 20px">Welcome to the Jigoxhz Website</h2>
+        <div class="rounded-box">
+            <div class="marquee">WELCOME, CONTINUE TO SUPPORT MY YOUTUBE CHANNEL WITH SUBSCRIBE AND LIKE, AND IF THERE IS A PROBLEM, YOU CAN CONTACT ME</div>
+        </div>
+        <div class="circle-text-container">
+            <div class="circle"></div>
+            <span class="dot">●</span> 
+            <span class="request-text bold">Request in development stage coming soon</span>
+        </div>
+        <!-- Menambahkan gambar di bawah teks berjalan -->
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="JIGOX.webp" alt="Deskripsi Gambar" class="request-image" style="max-width: 100%; height: auto;"> <!-- Ganti 'your-image.png' dengan nama file gambar Anda -->
+            <div class="circular-box">
+                <div class="text-box">𝗘𝗺𝗮𝗶𝗹 𝗔𝗻𝗱𝗮:</div> <!-- Elemen teks yang bisa diposisikan -->
+
+                <!-- Input untuk email -->
+                <input type="email" placeholder="Masukkan Email Anda" class="input-box" required>
+
+                <!-- Kotak pesan -->
+                <textarea placeholder="Masukkan Pesan Anda" class="message-box" required></textarea>
+
+                <!-- Tombol kirim -->
+                <button class="send-button" onclick="sendEmail()">Kirim</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-home">
+        <p style="text-align: center; margin-top: 20px; color: #ffa500;">&copy; 2024 Jigoxhzz. Semua hak dilindungi.</p>
+    </footer>
+    
+    <script>
+        // Fungsi untuk menampilkan atau menyembunyikan menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show'); // Menambah atau menghapus class 'show' pada nav
+            menu.classList.toggle('show'); // Menambah atau menghapus class 'show' pada menu
+        }
+
+        // Fungsi untuk mengirim email
+        function sendEmail() {
+            const email = document.querySelector('.input-box').value; // Mengambil nilai dari input email
+            const message = document.querySelector('.message-box').value; // Mengambil nilai dari textarea
+
+            // Validasi input
+            if (email === '' || message === '') {
+                alert('Silakan masukkan email dan pesan.');
+                return;
+            }
+
+            // Anda dapat menambahkan kode untuk mengirim email menggunakan EmailJS atau metode lain di sini
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // Reset input setelah mengirim
+            document.querySelector('.input-box').value = '';
+            document.querySelector('.message-box').value = '';
+        }
+    </script>
+</body>
+</html>

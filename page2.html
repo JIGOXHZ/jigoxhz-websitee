@@ -12,11 +12,34 @@
         <h1>Jigoxhzz</h1>
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <nav>
-            <ul id="menu">
-                <li><a href="https://t.me/JigoxhZzz" target="_blank">Telegram</a></li>
-                <li><a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank">Youtube</a></li>
-            </ul>
-        </nav>
+    <ul id="menu">
+        <img src="silang.png" alt="Close" class="close-button" onclick="toggleMenu()"> <!-- Tombol X dengan gambar -->
+        
+        <!-- Tambahkan kotak di atas menu Telegram -->
+        <li>
+            <div class="menu-box">HELP MENU</div> <!-- Kotak baru -->
+        <li class="menu-item slide-item">
+    <a href="https://t.me/JigoxhZzz" target="_blank" class="menu-text">
+        <img src="telegram.png" alt="Telegram" class="social-logo"> Telegram
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank" class="menu-text">
+        <img src="youtube.png" alt="YouTube" class="youtube-logo"> YouTube
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="https://saweria.co/Jigoxhz" target="_blank" class="menu-text">
+        <img src="saweria.png" alt="Saweria" class="social-logo">Donate/Support
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="page3.html" target="_blank" class="menu-text">
+        <img src="request.png" alt="Saweria" class="social-logo">Request
+    </a>
+</li>
+    </ul>
+</nav>
     </header>
     <main>
         <h2 style="text-align: center; color: #ffa500; margin: 7px 0; font-size: 20px">Welcome to the Jigoxhz Website</h2>
@@ -40,7 +63,9 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show'); // Menambah atau menghapus class 'show'
+            menu.classList.toggle('show'); // Optional, jika ingin mengubah tampilan
         }
     </script>
 </body>

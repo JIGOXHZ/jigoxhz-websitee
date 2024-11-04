@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jigoxhzz Website</title>
     <link rel="stylesheet" href="style.css"> <!-- Link ke style.css -->
+    <style>
+        /* Tambahan CSS untuk margin top menu Telegram */
+        nav ul li.menu-telegram {
+            margin-top: 90px; /* Ganti dengan nilai yang diinginkan */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,8 +19,31 @@
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <nav>
             <ul id="menu">
-                <li><a href="https://t.me/JigoxhZzz" target="_blank">Telegram</a></li>
-                <li><a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank">Youtube</a></li>
+                <img src="silang.png" alt="Close" class="close-button" onclick="toggleMenu()"> <!-- Tombol X dengan gambar -->
+                
+                <!-- Tambahkan kotak di atas menu Telegram -->
+                <li>
+                    <div class="menu-box">HELP MENU</div> <!-- Kotak baru -->
+                <li class="menu-item slide-item">
+    <a href="https://t.me/JigoxhZzz" target="_blank" class="menu-text">
+        <img src="telegram.png" alt="Telegram" class="social-logo"> Telegram
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank" class="menu-text">
+        <img src="youtube.png" alt="YouTube" class="youtube-logo"> YouTube
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="https://saweria.co/Jigoxhz" target="_blank" class="menu-text">
+        <img src="saweria.png" alt="Saweria" class="social-logo">Donate/Support
+    </a>
+</li>
+<li class="menu-item slide-item">
+    <a href="page3.html" class="menu-text">
+        <img src="request.png" alt="Request" class="social-logo"> Request
+    </a>
+</li>
             </ul>
         </nav>
     </header>
@@ -24,18 +53,22 @@
             <div class="marquee">WELCOME, CONTINUE TO SUPPORT MY YOUTUBE CHANNEL WITH SUBSCRIBE AND LIKE, AND IF THERE IS A PROBLEM, YOU CAN CONTACT ME</div>
         </div>
         <div class="button-container">
-            <a href="https://devuploads.com/jdroiy5b2wob" class="custom-button">Jigoxhz Virtual</a>
-            <a href="https://devuploads.com/61n5500c335a" class="custom-button" style="margin-left: 5px;">Jigoxhz GG</a>
+            <a href="https://devuploads.com/jdroiy5b2wob" class="custom-button"><strong>Jigoxhz Virtual</strong></a>
+            <a href="https://devuploads.com/61n5500c335a" class="custom-button" style="margin-left: 5px;"><strong>Jigoxhz GG</strong></a>
         </div>
-        <a href="page2.html" class="long-button">Script Game Guardian</a> <!-- Tombol panjang dengan latar belakang ffa500 -->
+        <a href="page2.html" class="long-button">Script Game Guardian</a>
     </main>
     <footer class="footer-home">
-    <p style="text-align: center; margin-top: 20px; color: #ffa500;">&copy; 2024 Jigoxhzz. Semua hak dilindungi.</p>
+        <p style="text-align: center; margin-top: 20px; color: #ffa500;">&copy; 2024 Jigoxhzz. Semua hak dilindungi.</p>
+    </footer>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show'); // Menambah atau menghapus class 'show'
+            menu.classList.toggle('show'); // Optional, jika ingin mengubah tampilan
         }
     </script>
+    <script src="main.js"></script> <!-- Menghubungkan ke file JavaScript -->
 </body>
 </html>
