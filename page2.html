@@ -5,6 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jigoxhzz Website</title>
     <link rel="stylesheet" href="style.css"> <!-- Link ke file style.css -->
+    <style>
+        /* Aturan untuk html dan body */
+        html, body {
+            height: 100%; /* Mengatur tinggi html dan body 100% */
+            margin: 0; /* Menghilangkan margin default */
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Mengatur arah kolom */
+            overflow-x: hidden; /* Menghilangkan scroll horizontal */
+            overflow-y: auto; /* Menghilangkan scroll vertikal */
+        }
+
+        main {
+            flex: 1; /* Membuat main mengambil ruang tersisa */
+        }
+
+        /* Styling untuk footer */
+        .footer-home {
+            background-color: rgba(255, 165, 0, 0.2); /* Warna oranye dengan 70% opasitas */
+            color: white; /* Warna teks */
+            text-align: center; /* Rata tengah */
+            padding: 20px 0; /* Ruang atas dan bawah */
+            width: 100%; /* Lebar penuh */
+            height: auto; /* Mengubah tinggi menjadi auto */
+            margin-top: 1px;
+            min-height: 200px; /* Tinggi minimum footer */
+            position: relative; /* Tidak perlu mengubah ini */
+            bottom: 0; /* Menjaga footer di bawah */
+            border-top: 2px solid #ffa500; /* Menambahkan stroke di atas footer */
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Membuat elemen di dalam footer vertikal */
+            align-items: center; /* Memusatkan elemen secara horizontal */
+        }
+
+        /* Styling untuk gambar dalam footer */
+        .footer-home img {
+            width: 55px; /* Ukuran lebar gambar */
+            align-self: flex-start;
+            height: auto; /* Menjaga proporsi gambar */
+            margin-top: -5px;
+            margin-left: 17px;
+            margin-bottom: 10px; /* Jarak di bawah gambar */
+        }
+
+        /* Styling untuk tautan di footer */
+        .footer-home a {
+            color: #ffa500; /* Warna teks */
+            text-decoration: none; /* Tanpa garis bawah */
+            margin: 5px 0; /* Jarak vertikal antar tautan */
+        }
+
+        /* Container untuk tautan footer yang dapat dipindahkan */
+        .footer-links {
+            display: flex; /* Menggunakan flexbox untuk memudahkan pemindahan */
+            flex-direction: column; /* Menyusun tautan secara vertikal */
+            align-items: flex-start; /* Mengatur agar tautan berada di sebelah kiri */
+            font-size: 13px;
+            margin-top: -10px; /* Jarak di atas container */
+            width: 100%; /* Agar container memenuhi lebar footer */
+            padding-left: 30px; /* Menambahkan padding kiri untuk memindahkan teks ke dalam */
+        }
+        
+        .footer-links p {
+    margin-top: 10px; /* Jarak di atas teks copyright */
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #ffff;
+    text-align: center;
+    width: 92%; /* Pastikan teks memenuhi lebar kontainer */
+    
+}
+    </style>
 </head>
 <body>
     <header>
@@ -12,34 +83,35 @@
         <h1>Jigoxhzz</h1>
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <nav>
-    <ul id="menu">
-        <img src="silang.png" alt="Close" class="close-button" onclick="toggleMenu()"> <!-- Tombol X dengan gambar -->
-        
-        <!-- Tambahkan kotak di atas menu Telegram -->
-        <li>
-            <div class="menu-box">HELP MENU</div> <!-- Kotak baru -->
-        <li class="menu-item slide-item">
-    <a href="https://t.me/JigoxhZzz" target="_blank" class="menu-text">
-        <img src="Telegram.png" alt="Telegram" class="social-logo"> Telegram
-    </a>
-</li>
-<li class="menu-item slide-item">
-    <a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank" class="menu-text">
-        <img src="Youtube.png" alt="YouTube" class="youtube-logo"> YouTube
-    </a>
-</li>
-<li class="menu-item slide-item">
-    <a href="https://saweria.co/Jigoxhz" target="_blank" class="menu-text">
-        <img src="Saweria.png" alt="Saweria" class="social-logo">Donate/Support
-    </a>
-</li>
-<li class="menu-item slide-item">
-    <a href="page3.html" target="_blank" class="menu-text">
-        <img src="Request.png" alt="Saweria" class="social-logo">Request
-    </a>
-</li>
-    </ul>
-</nav>
+            <ul id="menu">
+                <img src="silang.png" alt="Close" class="close-button" onclick="toggleMenu()"> <!-- Tombol X dengan gambar -->
+                
+                <!-- Tambahkan kotak di atas menu Telegram -->
+                <li>
+                    <div class="menu-box">HELP MENU</div> <!-- Kotak baru -->
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://t.me/JigoxhZzz" target="_blank" class="menu-text">
+                        <img src="Telegram.png" alt="Telegram" class="social-logo"> Telegram
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://youtube.com/@hackgameind?si=Cxi6Os93ir3w6LOd" target="_blank" class="menu-text">
+                        <img src="Youtube.png" alt="YouTube" class="youtube-logo"> YouTube
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="https://saweria.co/Jigoxhz" target="_blank" class="menu-text">
+                        <img src="Saweria.png" alt="Saweria" class="social-logo"> Donate/Support
+                    </a>
+                </li>
+                <li class="menu-item slide-item">
+                    <a href="page3.html" class="menu-text">
+                        <img src="Request.png" alt="Request" class="social-logo"> Request
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2 style="text-align: center; color: #ffa500; margin: 7px 0; font-size: 20px">Welcome to the Jigoxhz Website</h2>
@@ -47,19 +119,26 @@
             <div class="marquee">WELCOME, CONTINUE TO SUPPORT MY YOUTUBE CHANNEL WITH SUBSCRIBE AND LIKE, AND IF THERE IS A PROBLEM, YOU CAN CONTACT ME</div>
         </div>
 
-        <!-- Tambahkan tombol panjang di sini -->
         <div style="text-align: center;">
             <a href="https://subs4unlock.id/WAA3so" style="text-decoration: none;">
                 <button class="long-button">SIMPLE SCRIPT CPM V1</button>
             </a>
         </div>
-        
-        <!-- Tambahan konten untuk menggulir -->
     </main>
-    <footer class="footer-page2">
-    <p style="text-align: center; margin-top: 20px; color: #ffa500;">&copy; 2024 Jigoxhzz. Semua hak dilindungi.</p>
+    <footer class="footer-home">
+        <img src="Logo.png" alt="Logo">
+        <div class="footer-links"> <!-- Container untuk tautan footer -->
+    <a href="https://t.me/JigoxhZzz">Jigox Telegram</a>  
+    <a href="https://youtube.com/@hackgameind?si=eW2edczHHxLgiyQB">Jigox Youtube</a>
+    <a href="mailto:rakalord7@gmail.com?subject=REQUEST&body=Write%20Your%20Message%20Here">Request</a>
+    <a href="mailto:rakalord7@gmail.com?subject=REPORT&body=Write%20Your%20Message%20Here">Report</a>
+    
+    <!-- Teks copyright di tengah -->
+    <p style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; margin-top: 10px;">JIGOXHZZWEB.COM - Jigoxhzz download platform
+        <span style="margin-top: 10px;">&copy; 2024 JigoxhzzWeb.com, All rights.</span>
+    </p>
+</div>
     </footer>
-
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
