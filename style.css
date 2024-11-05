@@ -171,10 +171,55 @@ nav ul li a:hover {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.footer-home, .footer-page2 {
-    background-color: #808080;
-    text-align: center;
-    padding: 10px;
+/* Styling untuk footer */
+.footer-home {
+    background-color: rgba(255, 165, 0, 0.2); /* Warna oranye dengan 70% opasitas */
+    color: white; /* Warna teks */
+    text-align: center; /* Rata tengah */
+    padding: 20px 0; /* Ruang atas dan bawah */
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Mengubah tinggi menjadi auto */
+    margin-top: 1px;
+    min-height: 200px; /* Tinggi minimum footer */
+    position: relative; /* Tidak perlu mengubah ini */
+    bottom: 0; /* Menjaga footer di bawah */
+    border-top: 2px solid #ffa500; /* Menambahkan stroke di atas footer */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Membuat elemen di dalam footer vertikal */
+    align-items: center; /* Memusatkan elemen secara horizontal */
+}
+
+/* Styling untuk gambar dalam footer */
+.footer-home img {
+    width: 55px; /* Ukuran lebar gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    margin-top: -5px;
+    margin-bottom: 10px; /* Jarak di bawah gambar */
+}
+
+/* Styling untuk tautan di footer */
+.footer-home a {
+    color: #ffa500; /* Warna teks */
+    text-decoration: none; /* Tanpa garis bawah */
+    margin: 5px 0; /* Jarak vertikal antar tautan */
+}
+
+/* Container untuk tautan footer yang dapat dipindahkan */
+.footer-links {
+    display: flex; /* Menggunakan flexbox untuk memudahkan pemindahan */
+    flex-direction: column; /* Menyusun tautan secara vertikal */
+    align-items: center; /* Mengatur agar tautan berada di tengah */
+    margin-top: -10px; /* Jarak di atas container */
+    width: 100%; /* Agar container memenuhi lebar footer */
+    padding-left: 30px; /* Menambahkan padding kiri untuk memindahkan teks ke dalam */
+}
+
+.footer-links p {
+    margin-top: 10px; /* Jarak di atas teks copyright */
+    margin-bottom: 25px;
+    color: #ffff; /* Warna teks copyright */
+    text-align: center; /* Memastikan teks copyright rata tengah */
+    width: 92%; /* Pastikan teks memenuhi lebar kontainer */
 }
 
 .footer-home {
@@ -258,7 +303,7 @@ nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
 
 .circular-box {
     position: absolute;
-    top: 75%;
+    top: 77%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;

@@ -10,12 +10,65 @@
         nav ul li.menu-telegram {
             margin-top: 90px; /* Ganti dengan nilai yang diinginkan */
         }
-    </style>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init("pJ4oMWxUrm2ckwd7_"); // Ganti dengan User ID Anda
         })();
+        .footer-home {
+            background-color: rgba(255, 165, 0, 0.2); /* Warna oranye dengan 70% opasitas */
+            color: white; /* Warna teks */
+            text-align: center; /* Rata tengah */
+            padding: 20px 0; /* Ruang atas dan bawah */
+            width: 100%; /* Lebar penuh */
+            height: auto; /* Mengubah tinggi menjadi auto */
+            margin-top: 1px;
+            min-height: 200px; /* Tinggi minimum footer */
+            position: relative; /* Tidak perlu mengubah ini */
+            bottom: 0; /* Menjaga footer di bawah */
+            border-top: 2px solid #ffa500; /* Menambahkan stroke di atas footer */
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Membuat elemen di dalam footer vertikal */
+            align-items: center; /* Memusatkan elemen secara horizontal */
+        }
+
+        /* Styling untuk gambar dalam footer */
+        .footer-home img {
+            width: 55px; /* Ukuran lebar gambar */
+            align-self: flex-start;
+            height: auto; /* Menjaga proporsi gambar */
+            margin-top: -5px;
+            margin-left: 17px;
+            margin-bottom: 10px; /* Jarak di bawah gambar */
+        }
+
+        /* Styling untuk tautan di footer */
+        .footer-home a {
+            color: #ffa500; /* Warna teks */
+            text-decoration: none; /* Tanpa garis bawah */
+            margin: 5px 0; /* Jarak vertikal antar tautan */
+        }
+
+        /* Container untuk tautan footer yang dapat dipindahkan */
+        .footer-links {
+            display: flex; /* Menggunakan flexbox untuk memudahkan pemindahan */
+            flex-direction: column; /* Menyusun tautan secara vertikal */
+            align-items: flex-start; /* Mengatur agar tautan berada di sebelah kiri */
+            font-size: 13px;
+            margin-top: -10px; /* Jarak di atas container */
+            width: 100%; /* Agar container memenuhi lebar footer */
+            padding-left: 30px; /* Menambahkan padding kiri untuk memindahkan teks ke dalam */
+        }
+        .footer-links p {
+    margin-top: 10px; /* Jarak di atas teks copyright */
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #ffff;
+    text-align: center;
+    width: 92%; /* Pastikan teks memenuhi lebar kontainer */
+    
+}
+    </style>
     </script>
 </head>
 <body>
@@ -80,8 +133,18 @@
         </div>
     </main>
     <footer class="footer-home">
-        <p style="text-align: center; margin-top: 20px; color: #ffa500;">&copy; 2024 Jigoxhzz. Semua hak dilindungi.</p>
-    </footer>
+        <img src="Logo.png" alt="Logo">
+        <div class="footer-links"> <!-- Container untuk tautan footer -->
+    <a href="https://t.me/JigoxhZzz">Jigox Telegram</a>  
+    <a href="https://youtube.com/@hackgameind?si=eW2edczHHxLgiyQB">Jigox Youtube</a>
+    <a href="mailto:rakalord7@gmail.com?subject=REQUEST&body=Write%20Your%20Message%20Here">Request</a>
+    <a href="mailto:rakalord7@gmail.com?subject=REPORT&body=Write%20Your%20Message%20Here">Report</a>
+    
+    <!-- Teks copyright di tengah -->
+    <p style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; margin-top: 10px;">JIGOXHZZWEB.COM - Jigoxhzz download platform
+        <span style="margin-top: 10px;">&copy; 2024 JigoxhzzWeb.com, All rights.</span>
+    </p>
+</div>
     
     <script>
         // Fungsi untuk menampilkan atau menyembunyikan menu
