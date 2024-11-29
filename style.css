@@ -36,6 +36,8 @@ header {
     transition: background-color 0.3s, transform 0.3s;
     margin-left: auto;
     margin-right: 20px;
+    user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
 }
 
 .hamburger:hover {
@@ -124,7 +126,8 @@ nav ul li a:hover {
 
 .button-container {
     display: flex;
-    align-items: center;
+    align-items: center;user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
 }
 
 .rounded-box {
@@ -180,6 +183,8 @@ nav ul li a:hover {
     text-decoration: none;
     display: block;
     transition: background-color 0.3s, transform 0.3s;
+    user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
 }
 .long-button2 {
     background-color: #ffa500;
@@ -195,6 +200,8 @@ nav ul li a:hover {
     text-decoration: none;
     display: block;
     transition: background-color 0.3s, transform 0.3s;
+    user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
 }
 
 /* Styling untuk footer */
@@ -262,7 +269,7 @@ main {
 
 .close-button {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
     width: 30px;
     height: 30px;
@@ -385,4 +392,189 @@ nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
 
 .send-button:hover {
     background-color: #ffa500;
+}
+.kotakputih {
+  display: flex; /* Mengaktifkan Flexbox */
+  justify-content: center; /* Posisikan elemen secara horizontal di tengah */
+  align-items: flex-start; /* Posisikan elemen di atas (bukan vertikal di tengah) */
+  height: 100vh; /* Tinggi body sesuai tinggi viewport */
+  margin: 0; /* Menghapus margin default */
+}
+
+.kotak_putih {
+  background-color: #ffffff; /* Warna kotak putih */
+  margin-top: 20px; /* Jarak atas */
+  width: 300px; /* Lebar kotak */
+  height: 450px;
+  border: 2px solid #d3d3d3; /* Garis tepi abu-abu */
+  border-radius: 15px; /* Sudut melengkung */
+  padding: 20px; /* Ruang dalam kotak */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  text-align: center; /* Teks di tengah */
+  font-size: 23px; /* Ukuran font */
+  color: #6B737E; /* Warna teks */
+  display: flex; /* Mengaktifkan Flexbox dalam kotak putih */
+  flex-direction: column; /* Susun elemen secara vertikal */
+  font-weight: 399;
+  
+}
+
+.text2 {
+        text-align: center; /* Teks di tengah */
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: 300;
+  font-size: 18px; /* Ukuran font */
+  color: #767C86; /* Warna teks */
+}
+
+.tombolyoutube {
+  display: inline-flex; /* Mengaktifkan Flexbox hanya di tombol */
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ffa500;
+  height: 15px;
+  color: white; /* Warna teks tombol */
+  width: 240px;
+  text-decoration: none; /* Menghapus garis bawah pada teks link */
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center; /* Posisikan teks secara horizontal di tengah */
+  align-items: center; /* Posisikan teks secara vertikal di tengah */
+  border-radius: 8px; /* Sudut tombol lebih melengkung */
+  box-shadow: 0 5px 15px rgba(241, 132, 0, 0.5); /* Efek bayangan tombol */
+  transition: all 0.3s ease; /* Transisi efek hover */
+  margin: 7px; /* Memastikan tombol berada di tengah kontainer */
+  outline: none; /* Menghapus outline bawaan browser */
+  border: none; /* Menghapus border jika ada */
+  user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
+}
+
+.tombolyoutube:focus,
+.tombolyoutube:active {
+  outline: none; /* Menghapus outline saat fokus atau aktif */
+  border: none; /* Pastikan border tidak muncul */
+}
+
+.tombolyoutube:hover {
+  transform: translateY(-3px); /* Efek angkat tombol saat hover */
+  box-shadow: 0 8px 20px rgba(241,132,0,0.5); /* Bayangan lebih tajam saat hover */
+  background: #ffa500;
+}
+
+.tombolyoutube:active {
+  transform: translateY(1px); /* Efek saat tombol ditekan */
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4); /* Bayangan lebih kecil saat tombol ditekan */
+}
+
+.progress-container {
+  width: 270px; /* Lebar kotak progress bar */
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden; /* Menyembunyikan bagian yang keluar */
+  margin-left: 14px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%; /* Progress bar mulai dari 0% */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: width 1s ease-in-out; /* Menambahkan transisi untuk efek animasi */
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Lebar garis lebih besar dari progress bar */
+  height: 100%;
+  background: repeating-linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.3) 0px, 
+    rgba(255, 255, 255, 0.3) 5px,  /* Panjang setiap garis */
+    transparent 5px, 
+    transparent 10px
+  );
+  animation: moveLine 5s linear infinite; /* Animasi bergerak terus-menerus */
+  z-index: 1;
+}
+
+@keyframes moveLine {
+  0% {
+    left: 0%; /* Mulai dari kiri */
+  }
+  100% {
+    left: -100%; /* Bergerak ke kiri luar */
+  }
+}
+
+.textunlock {
+        font-weight: 500;
+        margin-top: 13px;
+        margin-bottom: 10px;
+        font-size: 18px; /* Ukuran font */
+}
+
+.openlink {
+  display: inline-flex; /* Mengaktifkan Flexbox hanya di tombol */
+  margin-top: 15px;
+  user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
+  padding: 12px 25px;
+  background: #757373; /* Warna abu-abu sebagai default */
+  height: 40px;
+  color: white; /* Warna teks tombol */
+  width: 240px;
+  text-decoration: none; /* Menghapus garis bawah pada teks link */
+  font-size: 18px;
+  font-weight: bold;
+  display: flex; /* Mengaktifkan Flexbox di tombol */
+  justify-content: center; /* Posisikan teks secara horizontal di tengah */
+  align-items: center; /* Posisikan teks secara vertikal di tengah */
+  border-radius: 8px; /* Sudut tombol lebih melengkung */
+  text-transform: uppercase; /* Mengubah teks menjadi kapital */
+  transition: all 0.3s ease; /* Transisi efek hover */
+  margin: 6px; /* Memastikan tombol berada di tengah kontainer */
+  pointer-events: none; /* Disable klik tombol saat progress belum selesai */
+}
+
+.openlink.active {
+  background: #4CAF50; /* Warna hijau setelah progress selesai */
+  pointer-events: auto; /* Aktifkan klik tombol */
+}
+
+.openlink:hover {
+  transform: translateY(-3px); /* Efek angkat tombol saat hover */
+  background: #757373;
+}
+
+.openlink:active {
+  transform: translateY(1px); /* Efek saat tombol ditekan */
+}
+
+.kotakjigox {
+  background-color: #ffffff; /* Warna kotak putih */
+  margin-top: 20px; /* Jarak atas */
+  width: 281px; /* Lebar kotak */
+  height: 75px; /* Menambah tinggi kotak agar teks berada di tengah secara vertikal */
+  border: 1px solid #d3d3d3; /* Garis tepi abu-abu */
+  border-radius: 15px; /* Sudut melengkung */
+  display: flex; /* Mengaktifkan Flexbox dalam kotak */
+  justify-content: center; /* Menyusun elemen secara horizontal di tengah */
+  align-items: center; /* Menyusun elemen secara vertikal di tengah */
+  text-align: center; /* Teks di tengah */
+  font-size: 14px; /* Ukuran font lebih kecil */
+  color: #6B737E; /* Warna teks */
+  font-weight: 400; /* Menetapkan ketebalan font yang lebih wajar */
+  margin: 9px; /* Memastikan tombol berada di tengah kontainer */
 }
