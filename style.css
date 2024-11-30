@@ -88,6 +88,69 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.hamburger2 {
+    background-color: #ff8c00;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: auto;
+    margin-right: 20px;
+    user-select: none; /* Mencegah teks bisa diseleksi */
+  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
+}
+
+.hamburger2:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+nav ul.show {
+    transform: translateX(0);
+}
+
+nav ul li {
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .social-logo, .youtube-logo {
     width: 17px;
     height: auto;
@@ -140,19 +203,136 @@ nav ul li a:hover {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.572); /* Menambahkan bayangan */
 }
 
+.outerdownload {
+    position: relative; /* Membuat elemen menjadi referensi untuk ::before dan ::after */
+    background-color: #6f6f6f; /* Warna latar untuk kotak luar */
+    width: 100%; /* Lebar kotak luar */
+    height: 30px; /* Tinggi kotak luar */
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: flex-start; /* Rata kiri secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.572); /* Menambahkan bayangan */
+    padding-left: 10px; /* Jarak dari kiri (opsional) */
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    font-size: 12px; /* Ukuran teks */
+    overflow: hidden; /* Menyembunyikan elemen pseudo di luar kotak */
+    z-index: 1; /* Konten utama tetap di atas */
+}
+
+.outerdownload::before,
+.outerdownload::after {
+    content: ''; /* Konten kosong untuk pseudo-element */
+    position: absolute; /* Membuat elemen tidak memengaruhi tata letak */
+    height: 2px; /* Tinggi garis */
+    pointer-events: none; /* Mencegah interaksi */
+    z-index: 0; /* Berada di bawah konten utama */
+}
+
+.outerdownload::before {
+    top: 0; /* Posisi di atas */
+    left: -100%; /* Mulai dari luar elemen */
+    width: 100%; /* Lebar garis */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradien dari pudar ke tebal */
+    animation: slide-left 2s linear infinite; /* Animasi bergerak dari kiri ke kanan */
+}
+
+.outerdownload::after {
+    bottom: 0; /* Posisi di bawah */
+    right: -100%; /* Mulai dari luar elemen */
+    width: 100%; /* Lebar garis */
+    background: linear-gradient(to right, rgb(255,165,0), rgba(255, 255, 255, 0)); /* Gradien dari tebal ke pudar */
+    animation: slide-right 2s linear infinite; /* Animasi bergerak dari kanan ke kiri */
+}
+
+@keyframes slide-right {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.videoyt {
+    background: rgb(255,165,0);
+    width: 85%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    flex-direction: column; /* Mengubah arah konten menjadi kolom */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    box-shadow: 0px 0px 10px rgb(0,0,0);
+}
+
+.videoyt iframe {
+    width: 95%; /* Menyesuaikan lebar iframe */
+    height: 79%; /* Menyesuaikan tinggi iframe */
+    border-radius: 10px;
+}
+
+.video-text {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    font-size: 15px; /* Ukuran teks */
+    color: #fff; /* Warna teks */
+    font-weight: bold; /* Membuat teks tebal */
+    text-transform: uppercase; /* Membuat teks menjadi kapital semua */
+}
+
+.videoyt {
+    background: rgb(255,165,0);
+    width: 85%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    flex-direction: column; /* Mengubah arah konten menjadi kolom */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+.textproblem {
+    background: rgb(255,165,0);
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    flex-direction: column; /* Mengubah arah konten menjadi kolom */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
 .left-image {
     width: 24px; /* Menentukan ukuran gambar */
     height: auto; /* Menjaga proporsi gambar */
-    margin-right: -8px; /* Memberikan jarak antara gambar dan rounded-box */
-    margin-left: auto;
+    margin-left: 16px;
+   margin-right: 10px;
 }
 
 .rounded-box {
+        
     border-radius: 5px; /* Radius untuk kotak dalam */
     height: 24px; /* Tinggi kotak dalam */
     background-color: #ffa500; /* Warna latar kotak dalam */
     overflow: hidden; /* Menghindari konten keluar */
-    width: 86%; /* Lebar kotak dalam */
+    width: 100%; /* Lebar kotak dalam */
     text-align: center; /* Teks rata tengah */
     margin-left: auto;
     display: flex; /* Flexbox untuk konten dalam */
@@ -296,8 +476,9 @@ main {
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    width: 100%;
-    margin: 1px 0;
+    width: 120%;
+    margin-left: -38px;
+    margin-right: -40px;
     font-weight: bold;
     box-sizing: border-box;
 }
@@ -594,3 +775,43 @@ nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
   font-weight: 400; /* Menetapkan ketebalan font yang lebih wajar */
   margin: 9px; /* Memastikan tombol berada di tengah kontainer */
 }
+
+a {
+    outline: none; /* Menghilangkan outline biru saat fokus */
+    border: none;  /* Menghapus border jika ada */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh (Chrome/Safari) */
+    user-select: none; /* Mencegah teks bisa diseleksi */
+}
+
+.garishumberger {
+        background-color: #ffa500;
+        height: 2px;
+        width: 80%;
+        margin: 1px auto;
+        margin-top: -5px;
+        margin-bottom: 5px;
+}
+
+.tomboltutor {
+    background-color: #ffa500;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    height: 40px;
+    width: 250px;
+    margin-bottom: -5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: center; /* Menyusun elemen secara horizontal */
+    align-items: center; /* Menyusun elemen secara vertikal */
+    box-shadow: 0 4px 0px rgb(255,147,9); /* Efek bayangan untuk kesan menonjol */
+    transition: all 0.3s ease; /* Animasi transisi untuk efek */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.tomboltutor:active {
+    transform: translateY(4px); /* Menggerakkan tombol ke bawah saat diklik (efek kedalam) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan saat diklik */
