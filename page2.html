@@ -45,7 +45,7 @@
             height: auto; /* Menjaga proporsi gambar */
             margin-top: -5px;
             margin-left: 17px;
-            margin-bottom: 10px; /* Jarak di bawah gambar */
+            margin-bottom: 15px; /* Jarak di bawah gambar */
         }
 
         /* Styling untuk tautan di footer */
@@ -106,8 +106,13 @@
                     </a>
                 </li>
                 <li class="menu-item slide-item">
-                    <a href="page3.html" class="menu-text">
+                    <a href="mailto:rakalord7@gmail.com?subject=REQUEST&body=Write%20Your%20Message%20Here" class="menu-text">
                         <img src="Request.png" alt="Request" class="social-logo"> Request
+                    </a>
+                </li>
+                                <li class="menu-item slide-item">
+                    <a href="mailto:rakalord7@gmail.com?subject=REPORT&body=Write%20Your%20Message%20Here" class="menu-text">
+                        <img src="report.png" alt="Request" class="reportlogo"> Report
                     </a>
                 </li>
                 <div class="garishumberger"></div>
@@ -129,20 +134,26 @@
         </div>
     </div>
 </div>
-
-        <div style="text-align: center;">
-            <a href="https://subs4unlock.id/WAA3so" style="text-decoration: none;">
-                <button class="long-button2"><span class="class1">SIMPLE SCRIPT CPM V1</span>
-    (<span class="expired">EXPIRED</span>)</button>
-                <div style="text-align: center;">
-            <a href="unlocklink.html" style="text-decoration: none;">
-                <button class="long-button2">ALL IN ONE SCRIPT CPM V1</button>        
-            </a>
-        </div>
+        <div class="flex-1">
+  <a href="https://subs4unlock.id/WAA3so">
+    <button id="simplescript" class="button2 button-mat btn--5">
+      <div class="psuedo-text">SIMPLE SCRIPT CPM V1</span>
+    (<span class="expired">EXPIRED</span>)</div>
+    </button>
+  </a>
+</div>
+        <div class="flex-1">
+  <a href="unlocklink.html">
+    <button id="allinonescript" class="button button-mat btn--5">
+      <div class="psuedo-text">ALL IN ONE SCRIPT CPM V1</div>
+    </button>
+  </a>
+</div>
     </main>
     <footer class="footer-home">
         <img src="Logo.png" alt="Logo">
         <div class="footer-links"> <!-- Container untuk tautan footer -->
+    <a href="tutordownload.html">About Jigoxhzz - Jigoxhzzweb</a>
     <a href="https://t.me/JigoxhZzz">Jigox Telegram</a>  
     <a href="https://youtube.com/@hackgameind?si=eW2edczHHxLgiyQB">Jigox Youtube</a>
     <a href="mailto:rakalord7@gmail.com?subject=REQUEST&body=Write%20Your%20Message%20Here">Request</a>
@@ -155,6 +166,25 @@
     </p>
 </div>
     </footer>
+    <script>
+            document.getElementById('simplescript').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah aksi default (membuka link langsung)
+  
+    // Menambahkan jeda 1 detik sebelum membuka link
+    setTimeout(function() {
+        window.location.href = 'https://subs4unlock.id/WAA3so'; // Mengarahkan ke halaman setelah 1 detik
+    }, 500); // Waktu jeda dalam milidetik (1000ms = 1 detik)
+});
+
+            document.getElementById('allinonescript').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah aksi default (membuka link langsung)
+  
+    // Menambahkan jeda 1 detik sebelum membuka link
+    setTimeout(function() {
+        window.location.href = 'unlocklink.html'; // Mengarahkan ke halaman setelah 1 detik
+    }, 500); // Waktu jeda dalam milidetik (1000ms = 1 detik)
+});
+    </script>
      <script src="main.js"></script> <!-- Menghubungkan ke file JavaScript -->
 </body>
 </html>

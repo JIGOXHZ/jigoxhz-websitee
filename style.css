@@ -163,6 +163,18 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.reportlogo {
+    width: 13px;
+    height: auto;
+    margin-right: 5px;
+    transition: transform 0.3s;
+    vertical-align: middle;
+}
+
+.social-logo:hover, .youtube-logo:hover {
+    transform: scale(1.1);
+}
+
 .custom-button {
     background-color: #808080;
     border: 2px solid #ffa500;
@@ -174,6 +186,7 @@ nav ul li a:hover {
     font-size: 16px;
     text-align: center;
     margin: 20px 0 0 0;
+    margin-bottom: 13px;
     margin-left: 10px;
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
@@ -260,6 +273,188 @@ nav ul li a:hover {
     100% {
         left: 100%;
     }
+}
+
+.telegramcontact {
+    position: relative;
+    background-color: #6f6f6f;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.572);
+    padding-right: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 0px rgb(83, 83, 83);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    z-index: 1;
+}
+
+/* Gaya untuk lingkaran */
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+    animation: floatCircle 6s infinite linear;
+}
+
+/* Ukuran dan posisi awal unik untuk masing-masing lingkaran */
+.circle1 {
+    top: 10%;
+    left: 10%;
+    animation: moveCircle1 7s infinite ease-in-out;
+}
+
+.circle2 {
+    top: 20%;
+    left: 70%;
+    animation: moveCircle2 5s infinite ease-in-out;
+}
+
+.circle3 {
+    top: 60%;
+    left: 30%;
+    animation: moveCircle3 8s infinite ease-in-out;
+}
+
+.circle4 {
+    top: 50%;
+    left: 80%;
+    animation: moveCircle4 6s infinite ease-in-out;
+}
+
+.circle5 {
+    top: 70%;
+    left: 20%;
+    animation: moveCircle5 9s infinite ease-in-out;
+}
+
+/* Animasi untuk masing-masing lingkaran */
+@keyframes moveCircle1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(-10px, 15px);
+    }
+    75% {
+        transform: translate(15px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-15px, -10px);
+    }
+    50% {
+        transform: translate(15px, -20px);
+    }
+    75% {
+        transform: translate(-10px, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveCircle3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, 25px);
+    }
+    50% {
+        transform: translate(-25px, -20px);
+    }
+    75% {
+        transform: translate(15px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveCircle4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -15px);
+    }
+    50% {
+        transform: translate(-20px, 20px);
+    }
+    75% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveCircle5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-20px, 10px);
+    }
+    50% {
+        transform: translate(10px, -20px);
+    }
+    75% {
+        transform: translate(-15px, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Pastikan konten utama tetap di atas */
+.telegramcontact img, 
+.telegramcontact span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Pastikan konten utama tetap di atas */
+.telegramcontact img, 
+.telegramcontact span {
+    position: relative;
+    z-index: 1;
+}
+
+.telegramcontact:active {
+    transform: translateY(4px); /* Menggerakkan tombol ke bawah saat diklik (efek kedalam) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan saat diklik */
+}
+
+.icontelegramtutor {
+    width: 25px; /* Ukuran gambar */
+    height: 25px;
+    margin-left: 8px; /* Jarak antara gambar dan teks */
 }
 
 .videoyt {
@@ -355,22 +550,148 @@ nav ul li a:hover {
     }
 }
 
-.long-button {
-    background-color: #ffa500;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
+.button {
+    padding: 10px; /* Adjust padding to match .long-button */
+    background: white;
     text-align: center;
-    width: 94%;
-    border-radius: 5px;
-    margin: 20px auto;
-    text-decoration: none;
+    display: inline-block;
+    font-size: 5px; /* Adjust font size to match .long-button */
+    text-transform: uppercase;
+    position: relative;
+    width: 100%; /* Match the width of .long-button */
+    height: 42px;
+    border-radius: 5px; /* Match border-radius of .long-button */
+    margin: 5px auto; /* Match margin to center the button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    will-change: transform;
+}
+
+.button-mat {
+    color: #5533ff;
+    border: 0px transparent;
+    border-radius: 5px; /* Match border-radius of .long-button */
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.35s;
+    overflow: hidden;
+}
+
+.button-mat:before {
+    content: "";
     display: block;
-    transition: background-color 0.3s, transform 0.3s;
-    user-select: none; /* Mencegah teks bisa diseleksi */
-  -webkit-tap-highlight-color: transparent; /* Menghapus efek highlight pada perangkat sentuh */
+    background: #ffa500;
+    position: absolute;
+    width: 200%;
+    height: 500%;
+    border-radius: 100%;
+    transition: 0.36s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.button-mat:hover .psuedo-text {
+    color: white;
+}
+
+.button-mat:hover {
+    color: transparent;
+}
+
+.psuedo-text {
+    color: #ffa500;
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.25s ease-in;
+    transition-delay: 0.1s;
+}
+
+.btn--5 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn--5:before {
+    transform: translate(-120%, -50%) translateZ(0);
+}
+
+.btn--5:hover:before {
+    transform: translate(-45%, -34%) translateZ(0);
+}
+
+.expired {
+        color: #d90000;
+        font-weight: 500;
+}
+
+.button2 {
+    padding: 10px; /* Adjust padding to match .long-button */
+    background: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 5px; /* Adjust font size to match .long-button */
+    text-transform: uppercase;
+    position: relative;
+    width: 100%; /* Match the width of .long-button */
+    height: 42px;
+    margin-bottom: 4px;
+    border-radius: 5px; /* Match border-radius of .long-button */
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    will-change: transform;
+}
+
+.button-mat {
+    color: #5533ff;
+    border: 0px transparent;
+    border-radius: 5px; /* Match border-radius of .long-button */
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.35s;
+    overflow: hidden;
+}
+
+.button-mat:before {
+    content: "";
+    display: block;
+    background: #ffa500;
+    position: absolute;
+    width: 200%;
+    height: 500%;
+    border-radius: 100%;
+    transition: 0.36s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.button-mat:hover .psuedo-text {
+    color: white;
+}
+
+.button-mat:hover {
+    color: transparent;
+}
+
+.psuedo-text {
+    color: #ffa500;
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.25s ease-in;
+    transition-delay: 0.1s;
+}
+
+.btn--5 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn--5:before {
+    transform: translate(-120%, -50%) translateZ(0);
+}
+
+.btn--5:hover:before {
+    transform: translate(-45%, -34%) translateZ(0);
 }
 
 .expired {
@@ -514,6 +835,7 @@ nav ul.show .slide-item:nth-child(3) { transition-delay: 0.1s; }
 nav ul.show .slide-item:nth-child(4) { transition-delay: 0.2s; }
 nav ul.show .slide-item:nth-child(5) { transition-delay: 0.3s; }
 nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
+nav ul.show .slide-item:nth-child(7) { transition-delay: 0.5s; }
 
 .menu-text {
     font-size: 14px;
@@ -656,8 +978,8 @@ nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
   justify-content: center; /* Posisikan teks secara horizontal di tengah */
   align-items: center; /* Posisikan teks secara vertikal di tengah */
   border-radius: 8px; /* Sudut tombol lebih melengkung */
-  box-shadow: 0 5px 15px rgba(241, 132, 0, 0.5); /* Efek bayangan tombol */
-  transition: all 0.3s ease; /* Transisi efek hover */
+  box-shadow: 0 4px 0px rgb(255,147,9); /* Efek bayangan untuk kesan menonjol */
+    transition: all 0.3s ease; /* Animasi transisi untuk efek */
   margin: 7px; /* Memastikan tombol berada di tengah kontainer */
   outline: none; /* Menghapus outline bawaan browser */
   border: none; /* Menghapus border jika ada */
@@ -673,19 +995,19 @@ nav ul.show .slide-item:nth-child(6) { transition-delay: 0.4s; }
 
 .tombolyoutube:hover {
   transform: translateY(-3px); /* Efek angkat tombol saat hover */
-  box-shadow: 0 8px 20px rgba(241,132,0,0.5); /* Bayangan lebih tajam saat hover */
+  box-shadow: 0 4px 0px rgb(255,147,9); /* Efek bayangan untuk kesan menonjol */
   background: #ffa500;
 }
 
 .tombolyoutube:active {
-  transform: translateY(1px); /* Efek saat tombol ditekan */
-  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4); /* Bayangan lebih kecil saat tombol ditekan */
+  transform: translateY(3px); /* Efek saat tombol ditekan */
+  box-shadow: 0 4px 4px rgba(255,147,9,0); /* Efek bayangan untuk kesan menonjol */
 }
 
 .progress-container {
   width: 270px; /* Lebar kotak progress bar */
   height: 10px;
-  background-color: #e0e0e0;
+  background-color: #e0e0e0;>
   border-radius: 10px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -831,3 +1153,82 @@ a {
 .tomboltutor:active {
     transform: translateY(4px); /* Menggerakkan tombol ke bawah saat diklik (efek kedalam) */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan saat diklik */
+}
+
+.footer-home2 {
+    background-color: rgba(255, 165, 0, 0.2); /* Warna oranye dengan 70% opasitas */
+    color: white; /* Warna teks */
+    text-align: center; /* Rata tengah */
+    padding: 20px 0; /* Ruang atas dan bawah */
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Mengubah tinggi menjadi auto */
+    margin-top: 1px;
+    min-height: 200px; /* Tinggi minimum footer */
+    position: relative; /* Tidak perlu mengubah ini */
+    bottom: -80px; /* Menjaga footer di bawah */
+    border-top: 2px solid #ffa500; /* Menambahkan stroke di atas footer */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Membuat elemen di dalam footer vertikal */
+    align-items: center; /* Memusatkan elemen secara horizontal */
+}
+
+/* Styling untuk gambar dalam footer */
+.footer-home2 img {
+    width: 55px; /* Ukuran lebar gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    margin-top: -5px;
+    margin-bottom: 15px; /* Jarak di bawah gambar */
+}
+
+/* Styling untuk tautan di footer */
+.footer-home2 a {
+    color: #ffa500; /* Warna teks */
+    text-decoration: none; /* Tanpa garis bawah */
+    margin: 5px 0; /* Jarak vertikal antar tautan */
+}
+
+/* Container untuk tautan footer yang dapat dipindahkan */
+.footer-links {
+    display: flex; /* Menggunakan flexbox untuk memudahkan pemindahan */
+    flex-direction: column; /* Menyusun tautan secara vertikal */
+    align-items: center; /* Mengatur agar tautan berada di tengah */
+    margin-top: -10px; /* Jarak di atas container */
+    width: 100%; /* Agar container memenuhi lebar footer */
+    padding-left: 30px; /* Menambahkan padding kiri untuk memindahkan teks ke dalam */
+}
+
+.footer-links a {
+    text-decoration: none; /* Menghilangkan garis bawah bawaan */
+    color: inherit; /* Warna teks sesuai tema bawaan */
+    transition: all 0.3s ease; /* Animasi transisi halus */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Menampilkan garis bawah saat hover */
+    color: #007BFF; /* Warna biru saat hover */
+}
+
+.footer-links a:active {
+    background-color: rgba(0,123,255,0.231); /* Warna biru muda saat diklik */
+    border-radius: 3px; /* Memberikan efek sedikit melengkung */
+}
+
+.footer-links p {
+    margin-top: 10px; /* Jarak di atas teks copyright */
+    margin-bottom: 25px;
+    color: #ffff; /* Warna teks copyright */
+    text-align: center; /* Memastikan teks copyright rata tengah */
+    width: 92%; /* Pastikan teks memenuhi lebar kontainer */
+}
+
+.footer-home2 {
+    margin-top: 320px;
+}
+
+.footer-page2 {
+    margin-top: 424px;
+}
+
+main {
+    padding-top: 80px;
+}

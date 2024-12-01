@@ -105,8 +105,13 @@ main {
                     </a>
                 </li>
                 <li class="menu-item slide-item">
-                    <a href="page3.html" class="menu-text">
+                    <a href="mailto:rakalord7@gmail.com?subject=REQUEST&body=Write%20Your%20Message%20Here" class="menu-text">
                         <img src="Request.png" alt="Request" class="social-logo"> Request
+                    </a>
+                </li>
+                                <li class="menu-item slide-item">
+                    <a href="mailto:rakalord7@gmail.com?subject=REPORT&body=Write%20Your%20Message%20Here" class="menu-text">
+                        <img src="report.png" alt="Request" class="reportlogo"> Report
                     </a>
                 </li>
                 <div class="garishumberger"></div>
@@ -132,6 +137,18 @@ main {
 </div>
 <div class="outerdownload">If You Have Any Problems Please Contact Me On Telegram
 </div>
+</div>
+</div>
+<a href="https://t.me/JigoxhZzz" id="telegramcontactbtn" class="telegramcontact">
+    Telegram
+    <img src="Telegram.png" alt="Telegram Icon" class="icontelegramtutor">
+    <!-- Tambahkan container untuk lingkaran -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+</a>
     <footer class="footer-home">
         <img src="Logo.png" alt="Logo">
         <div class="footer-links"> <!-- Container untuk tautan footer -->
@@ -148,6 +165,17 @@ main {
 </div>
 </div>
     </footer>
+    <script>
+            // Fungsi untuk menangani klik pada link dengan jeda 1 detik
+document.getElementById('telegramcontactbtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah aksi default (membuka link langsung)
+  
+    // Menambahkan jeda 1 detik sebelum membuka link
+    setTimeout(function() {
+        window.location.href = 'https://t.me/JigoxhZzz'; // Mengarahkan ke halaman setelah 1 detik
+    }, 500); // Waktu jeda dalam milidetik (1000ms = 1 detik)
+});
+    </script>
     <script src="main.js"></script> <!-- Menghubungkan ke file JavaScript -->
 </body>
 </html>
