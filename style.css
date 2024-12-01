@@ -439,6 +439,22 @@ nav ul li a:hover {
     padding-left: 30px; /* Menambahkan padding kiri untuk memindahkan teks ke dalam */
 }
 
+.footer-links a {
+    text-decoration: none; /* Menghilangkan garis bawah bawaan */
+    color: inherit; /* Warna teks sesuai tema bawaan */
+    transition: all 0.3s ease; /* Animasi transisi halus */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Menampilkan garis bawah saat hover */
+    color: #007BFF; /* Warna biru saat hover */
+}
+
+.footer-links a:active {
+    background-color: rgba(0,123,255,0.231); /* Warna biru muda saat diklik */
+    border-radius: 3px; /* Memberikan efek sedikit melengkung */
+}
+
 .footer-links p {
     margin-top: 10px; /* Jarak di atas teks copyright */
     margin-bottom: 25px;
