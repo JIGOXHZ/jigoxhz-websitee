@@ -24,3 +24,14 @@ function toggleMenu() {
   nav.classList.toggle('show'); // Menambah atau menghapus class 'show'
   menu.classList.toggle('show'); // Optional, jika ingin mengubah tampilan
 }
+
+// Pilih semua tombol dengan kelas "test"
+const buttons = document.querySelectorAll('.test');
+
+// Tambahkan event listener untuk setiap tombol
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Tambahkan kelas "clicked" ke tombol yang diklik
+        button.classList.add('clicked');
+    });
+});

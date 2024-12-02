@@ -175,31 +175,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-.custom-button {
-    background-color: #808080;
-    border: 2px solid #ffa500;
-    color: white;
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    margin: 20px 0 0 0;
-    margin-bottom: 13px;
-    margin-left: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.custom-button:hover {
-    background-color: rgba(255, 165, 0, 0.8);
-    transform: scale(1.05);
-}
-
 .button-container {
     display: flex;
     align-items: center;user-select: none; /* Mencegah teks bisa diseleksi */
@@ -1246,4 +1221,76 @@ a {
 
 main {
     padding-top: 80px;
+}
+
+/* From Uiverse.io by CristianMontoya98 */ 
+.button-kontener {
+    display: flex; /* Menggunakan Flexbox */
+    gap: 8px; /* Mengatur jarak antar tombol, Anda bisa sesuaikan angkanya */
+    margin-left: 15px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.test {
+    width: 84px; /* Lebar tombol */
+    height: 80px; /* Tinggi tombol */
+    background: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.473); /* Default box-shadow */
+    overflow: hidden; /* Membatasi animasi hanya di dalam tombol */
+    display: flex; /* Agar teks berada di tengah tombol */
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease; /* Animasi perubahan box-shadow */
+}
+
+.test:hover {
+    color: black;
+}
+
+.test.clicked {
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.473); /* Box-shadow tetap setelah diklik */
+}
+
+.test:after {
+    content: "";
+    background: #ffffff;
+    position: absolute;
+    z-index: 0; /* Letakkan animasi di bawah teks */
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s ease-in-out;
+    clip-path: inset(0 0 0 0); /* Membatasi animasi ke dalam elemen */
+}
+
+.test:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s ease-in-out;
+}
+
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #ffa500; /* Warna teks */
+    opacity: 0; /* Awalnya tidak terlihat */
+    z-index: 1; /* Teks di atas animasi */
+    transition: opacity 0.3s ease-in-out; /* Animasi munculnya teks */
+}
+
+.test:hover .hidden-text {
+    opacity: 1; /* Teks muncul saat hover */
 }
