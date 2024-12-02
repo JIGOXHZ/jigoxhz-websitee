@@ -938,9 +938,9 @@ nav ul.show .slide-item:nth-child(7) { transition-delay: 0.5s; }
 
 .kotak_putih {
   background-color: #ffffff; /* Warna kotak putih */
-  margin-top: 20px; /* Jarak atas */
+  margin-top: 0px; /* Jarak atas */
   width: 300px; /* Lebar kotak */
-  height: 450px;
+  height: 450px; /* Tinggi kotak */
   border: 2px solid #d3d3d3; /* Garis tepi abu-abu */
   border-radius: 15px; /* Sudut melengkung */
   padding: 20px; /* Ruang dalam kotak */
@@ -951,7 +951,22 @@ nav ul.show .slide-item:nth-child(7) { transition-delay: 0.5s; }
   display: flex; /* Mengaktifkan Flexbox dalam kotak putih */
   flex-direction: column; /* Susun elemen secara vertikal */
   font-weight: 399;
-  
+  position: relative; /* Mengaktifkan positioning untuk anak seperti overlay */
+  overflow: hidden; /* Mencegah elemen keluar dari batas kotak */
+}
+
+.overlay {
+  position: absolute; /* Mengikuti parent kotak_putih */
+  top: 50%; /* Posisi vertikal 50% dari atas */
+  left: 50%; /* Posisi horizontal 50% dari kiri */
+  width: 95%; /* Menyesuaikan dengan lebar parent */
+  height: 97%; /* Menyesuaikan dengan tinggi parent */
+  background-color: rgba(255, 255, 255, 0); /* Transparan */
+  border: 1px solid #0000003e; /* Garis tepi abu-abu */
+  border-radius: 15px; /* Mengikuti sudut melengkung parent */
+  z-index: 1; /* Letakkan di atas semua elemen di kotak_putih */
+  transform: translate(-50%, -50%); /* Geser titik pusat elemen ke tengah */
+  pointer-events: none; /* Nonaktifkan respons klik pada overlay */
 }
 
 .text2 {
@@ -1110,7 +1125,7 @@ nav ul.show .slide-item:nth-child(7) { transition-delay: 0.5s; }
   text-align: center; /* Teks di tengah */
   font-size: 14px; /* Ukuran font lebih kecil */
   color: #6B737E; /* Warna teks */
-  font-weight: 400; /* Menetapkan ketebalan font yang lebih wajar */
+  font-weight: 600; /* Menetapkan ketebalan font yang lebih wajar */
   margin: 9px; /* Memastikan tombol berada di tengah kontainer */
 }
 
