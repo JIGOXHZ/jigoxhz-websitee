@@ -1455,7 +1455,7 @@ main {
 
 .textkurung {
   color: #ff6347; /* Warna teks dalam kurung */
-  font-size: 5px;
+  font-size: 10px;
   font-style: italic; /* Menambahkan gaya miring */
   font-weight: bold; /* Menambahkan ketebalan font */
   display: inline-block; /* Agar dapat diatur posisinya */
