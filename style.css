@@ -1294,3 +1294,311 @@ main {
 .test:hover .hidden-text {
     opacity: 1; /* Teks muncul saat hover */
 }
+
+.containerscript {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  cursor: pointer;
+  background-color: rgb(53,53,53);
+  padding: 5px 15px;
+  margin-top: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+.boxscript {
+  width: 5px;
+  height: 25px;
+  background-color: #ffa500;
+  margin-right: 10px;
+}
+
+.textacript {
+  font-size: 13px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.arrowscript {
+  width: 30px;   /* Atur ukuran gambar panah */
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.boxes-container {
+  display: none; /* Sembunyikan box saat halaman pertama kali dimuat */
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 500px;
+  flex-direction: row; /* Menyusun box dalam satu baris */
+  gap: 10px;
+  overflow-x: auto; /* Scroll horizontal */
+  width: 95%; /* Lebar penuh */
+  white-space: nowrap; /* Mencegah elemen pindah ke baris berikutnya */
+}
+
+.box {
+  width: 250px; 
+  height: 390px;
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden; /* Menghindari overflow */
+}
+
+.containerdalambox {
+  padding: 10px;
+  max-width: 100%;
+  height: 100%; /* Menyesuaikan tinggi container */
+  box-sizing: border-box;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  overflow-y: auto; /* Scroll jika konten melebihi tinggi */
+}
+
+.headerdalambox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.headerdalambox img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.headerdalambox div {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.headerdalambox div span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #aaa;
+}
+
+.subtitledalambox {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.infodalambox {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.infodalambox a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.infodalambox a:hover {
+  text-decoration: underline;
+}
+
+.dividerdalambox {
+  border-bottom: 1px solid #444;
+  margin: 8px 0;
+}
+
+.listdalambox {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.listcaradownload {
+  list-style: none;
+  font-size: 14px;
+  text-align: center;  /* Memusatkan teks dalam list */
+  margin: 0;  /* Menghilangkan margin default */
+  padding: 0;  /* Menghilangkan padding default */
+}
+
+.link-virtual {
+  color: #00aaff; /* Warna biru untuk link virtual */
+  text-decoration: none;
+}
+
+.link-virtual:hover {
+  text-decoration: underline;
+}
+
+.link-gg {
+  color: #00aaff; /* Warna merah untuk link GG */
+  text-decoration: none;
+}
+
+.link-gg:hover {
+  text-decoration: underline;
+}
+
+.linkcaradownload {
+  color: #00aaff; /* Warna biru untuk link virtual */
+  text-decoration: none;
+}
+
+.linkcaradownload:hover {
+  text-decoration: underline;
+}
+
+.textkurung {
+  color: #ff6347; /* Warna teks dalam kurung */
+  font-size: 5px;
+  font-style: italic; /* Menambahkan gaya miring */
+  font-weight: bold; /* Menambahkan ketebalan font */
+  display: inline-block; /* Agar dapat diatur posisinya */
+  vertical-align: middle; /* Menjaga agar teks berada di tengah secara vertikal */
+}
+
+.footerdalambox {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footerdalambox a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.footerdalambox a:hover {
+  text-decoration: underline;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  height: 20px; /* Adjust as necessary */
+  margin-top: 40px;
+}
+
+.buttondownload {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 25px;
+  --tooltip-width: 80px;
+  --gap-between-tooltip-to-button: 15px;
+  --button-color: #ffa500;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 2px #000000;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.buttondownload::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.buttondownload::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.buttondownload::after,
+.buttondownload::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  text-decoration: none;  /* Hilangkan garis bawah */
+  color: inherit;  /* Warna sesuai elemen induk */
+  top: 100%;  /* Posisi awal ikon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s;
+}
+
+.icon svg {
+  pointer-events: none;  /* Hindari efek hover pada SVG */
+  width: 24px;
+  height: 24px;
+}
+
+.buttondownload:hover {
+  background: #ffa500;
+}
+
+.buttondownload:hover .text {
+  top: -100%;
+}
+
+.buttondownload:hover .icon {
+  top: 0;
+}
+
+.buttondownload:hover::before,
+.buttondownload:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buttondownload:hover::after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.buttondownload:hover::before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}

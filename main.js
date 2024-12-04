@@ -35,3 +35,32 @@ buttons.forEach(button => {
         button.classList.add('clicked');
     });
 });
+
+
+    function toggleArrow() {
+  const arrow = document.getElementById('arrow');
+  const boxesContainer = document.getElementById('boxes-container');
+
+  // Toggle arrow direction
+  if (arrow.innerHTML === '⇓') {
+    arrow.innerHTML = '⇒'; // Change to right arrow
+    boxesContainer.style.display = 'flex'; // Show the boxes
+  } else {
+    arrow.innerHTML = '⇓'; // Change to down arrow
+    boxesContainer.style.display = 'none'; // Hide the boxes
+  }
+}
+
+function toggleArrow1() {
+  const arrow = document.getElementById('arrow1');
+  const boxesContainer = document.getElementById('boxes-container1');
+
+  // Toggle arrow direction
+  if (arrow.innerHTML === '⇓') {
+    arrow.innerHTML = '⇒'; // Change to right arrow
+    boxesContainer.style.display = 'flex'; // Show the boxes
+  } else {
+    arrow.innerHTML = '⇓'; // Change to down arrow
+    boxesContainer.style.display = 'none'; // Hide the boxes
+  }
+}
