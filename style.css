@@ -1330,7 +1330,7 @@ main {
 
 .boxes-container {
   display: none; /* Sembunyikan box saat halaman pertama kali dimuat */
-  margin-left: 10px;
+  margin-left: 9px;
   margin-top: 10px;
   margin-right: 500px;
   flex-direction: row; /* Menyusun box dalam satu baris */
